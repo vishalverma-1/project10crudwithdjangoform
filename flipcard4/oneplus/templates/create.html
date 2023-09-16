@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'one.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration page</title>
+</head>
+<body class="center">
+<div>
+    <h1><mark>USER REGISTRATION PAGE</mark></h1>
+    <form action="{% url 'create' %}" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Submit">
+    </form>
+    <a href="{% url 'read' %}">
+        <b>
+        SHOW DATA
+    </b>
+    </a>
+</div>
+</body>
+</html>

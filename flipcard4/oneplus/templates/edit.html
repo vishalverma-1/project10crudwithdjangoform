@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'one.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit page</title>
+</head>
+<body class="center">
+    <div>
+    <h1><mark>
+        EDIT PAGE
+    </mark></h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{data1.as_p}}
+        <input type="submit" value="Edit">
+    </form>
+</div>
+</body>
+</html>
